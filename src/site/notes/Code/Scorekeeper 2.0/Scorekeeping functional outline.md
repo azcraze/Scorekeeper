@@ -88,7 +88,3 @@ const jp = require("jsonpath");
 ```
 ````
 
-```ad-bug
-whelp
-```
-
