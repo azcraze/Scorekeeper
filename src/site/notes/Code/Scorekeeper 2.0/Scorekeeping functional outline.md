@@ -1,13 +1,7 @@
 ---
-{"dg-publish":true,"permalink":"/code/scorekeeper-2-0/scorekeeping-functional-outline/","dgPassFrontmatter":true}
+{"dg-publish":true,"dg-home":true,"permalink":"/code/scorekeeper-2-0/scorekeeping-functional-outline/","tags":"gardenEntry","dgPassFrontmatter":true}
 ---
 
-```
----
-dg-publish: true
-dg-home: true
----
-```
 
 
 #### *Concepts*
