@@ -1,5 +1,5 @@
 ---
-{"dg-publish":true,"permalink":"/code/scorekeeper-2-0/scorekeeping-functional-outline/"}
+{"dg-publish":true,"permalink":"/code/scorekeeper-2-0/scorekeeping-functional-outline/","dgPassFrontmatter":true}
 ---
 
 ```
@@ -62,6 +62,10 @@ blues: number
 ```ad-idea
 bring up the idea of not counting bonuses for RK or not counting kills seperately for KC. ask smirly and members.
 ```
+
+### Functionality
+`rir:FileCode`
+
 
 ````ad-summary
 title: JSON Files
