@@ -24,7 +24,6 @@
 ## The Scores
 
 We have 2 submission channels for members to submit screenshots to count towards their recorded scores. 
-
 We then have *daily*, *weekly*, and *monthly* winners announced for each of the two categories. 
 
 ### Point system
@@ -57,8 +56,39 @@ blues: number
 bring up the idea of not counting bonuses for RK or not counting kills seperately for KC. ask smirly and members.
 ```
 
-### Functionality
-`rir:FileCode`
+### Functionality & interactions
+- Server initialization
+- User registration
+- Assigning scores role
+- Initializing database profile
+- Tracking current date
+- Scorekeeping commands to enter scores
+- Allows for changes to records
+- Calculating end of period scores
+- sorting and finding top results
+- Handling ties
+- Posting test embeds
+- Posting winner posts
+- Managing automatic role assignment and removal
+- Command to view player stats
+- Commands for current period leaderboards
+
+### Commands
+`%setup scorekeeper` - initialize server variables and data stores
+`%register` - register to get access to submission channels and scorekeeping
+`%skset` - group command for various settings and data setting
+- `%skset newuser` - will take parameters (tbd)
+- `%skset date` - manually adjust date or check current setting
+- `%skset admin` - admin commands? 
+- `%skset logs` - log settings and commands
+`%sk <+|->` - sk command to add or subtract daily scores for a player
+`%testpost (d|w|m)` - preview winner result embeds and check for corrections needed
+`%post (d|w|m)` - post winners
+`%scores` - check personal or other player stats
+`%lb` - get current tallied scores
+
+## Bot Development Process
+
 
 
 ````ad-summary
