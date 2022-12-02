@@ -76,3 +76,17 @@ body {
     background-color: #8100ff66;
     color: #9b87ff;
 }
+
+.markdown-rendered blockquote > :first-child {
+    margin-top: 0;
+    font-style: italic;
+    color: #64677a;
+}
+
+a {
+    color: #7f85b8;
+    outline: none;
+    text-decoration-line: var(--link-decoration);
+    text-decoration-thickness: var(--link-decoration-thickness);
+    cursor: var(--cursor-link);
+}
