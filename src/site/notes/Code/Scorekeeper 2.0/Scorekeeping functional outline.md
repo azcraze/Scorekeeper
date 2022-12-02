@@ -120,7 +120,113 @@ This section covers each of the commands and the following information about eac
 ### *setup scorekeeper*
 **command usage:**
 `%setup scorekeeper` 
+**data to store:**
 
+**processes:**
+
+***variables:***
+
+***stored data:***
+
+***other data values:***
+
+**triggers actions:**
+
+**output:**
+
+
+
+#### *register*
+**command usage:**
+`%register [lb name]` 
+→ `[lb name]` - (optional short 8- character, simple name)
+*examples*  `%register pookie`, `%register zey`
+
+**data to store:**
+
+
+**processes:**
+
+***variables:***
+
+***stored data:***
+
+***other data values:***
+
+**triggers actions:**
+
+**output:**
+
+
+#### *skset* *(group command)*
+**command usage:**
+`%setup scorekeeper` 
+**data to store:**
+
+**output:**
+
+
+#### *skset newuser*
+**command usage:**
+`%setup scorekeeper` 
+**data to store:**
+
+**processes:**
+
+***variables:***
+
+***stored data:***
+
+***other data values:***
+
+**triggers actions:**
+
+**output:**
+
+
+
+#### *skset date*
+**command usage:**
+`%setup scorekeeper` 
+**data to store:**
+
+**processes:**
+
+***variables:***
+
+***stored data:***
+
+***other data values:***
+
+**triggers actions:**
+
+**output:**
+
+
+
+#### *skset admin*
+**command usage:**
+`%setup scorekeeper` 
+**data to store:**
+
+
+
+#### *skset date*
+**command usage:**
+`%setup scorekeeper` 
+**data to store:**
+
+**processes:**
+
+***variables:***
+
+***stored data:***
+
+***other data values:***
+
+**triggers actions:**
+
+**output:**
 
 
 
