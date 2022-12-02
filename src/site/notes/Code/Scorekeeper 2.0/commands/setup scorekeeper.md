@@ -13,7 +13,7 @@
 
 #### **data To store:**
 
-current date, year, month, week, day, doty, dotw, sksetup, kcdRole, kcwRole, kcmRole, kcRole, rkdRole, rkwRole, rkmRole, rkRole, skRole, registeredRole
+current date, year, month, week, day, doty, dotw, sksetup, kcdRole, kcwRole, kcmRole, kcRole, rkdRole, rkwRole, rkmRole, rkRole, skRole, registeredRole, channels
 
 #### **processes:**
 
@@ -38,19 +38,14 @@ if true:
 	- If variables are passed it will update the data with the roles as given 
 
 ***variables:***
-		kcdRole:
-		kcwRole:
-		kcmRole:
-		kcRole:
-		rkdRole
-		rkwRole
-		rkmRole
-		rkRole
-		skRole
-		registeredRole
-	- server data to set
-		- sksetup: true
-***stored data:***
+		- dayStamp: {dayStamp}
+		- year: {year}
+		- month: {month}
+		- week: {week}
+		- day: {day}
+		- doty: {doty}
+		- dotw: {dotw}
+***controlled data:***
 	- values to be set in the skvariables.json file
 		- dayStamp: {dayStamp}
 		- year: {year}
@@ -58,14 +53,111 @@ if true:
 		- week: {week}
 		- day: {day}
 		- doty: {doty}
-		- !dotw: {dotw}
+		- dotw: {dotw}
+		- kcdRole: null
+		- kcwRole: null
+		- kcmRole: null
+		- kcRole: null
+		- rkdRole: null
+		- rkwRole: null
+		- rkmRole: null
+		- rkRole: null
+		- skRole: null
+		- registeredRole: null
+	- server data to set
+		- sksetup: true
 
 ***other data values:***
+- channels
+	- scorekeeperch
+	- postch
+	- testch
+	- logsch
 
-**triggers actions:**
 
-**output:**
-tablefiles system reset
-No table rolled.  No tables available.
+````ad-codenote
+title: **snippets**
 
-note
+
+```ad-snip
+~~~js
+const serverVars = {
+sksetup: true
+}
+
+const vars = {
+counters: {
+	dayStamp: null,
+	year: null,
+	month: null,
+	week: null,
+	day: null,
+	doty: null,
+	dotw: null
+	},
+roles: {
+	kcdRole: null,
+	kcwRole: null,
+	kcmRole: null,
+	kcRole: null,
+	rkdRole: null,
+	rkwRole: null,
+	rkmRole: null,
+	rkRole: null
+},
+settings: {
+	channels: {
+		scorekeeperCh: null,
+		postCh: null,
+		testCh: null,
+		logsCh: null
+		},
+	registeredRole: null,
+	skRoles: []
+	}
+}
+
+
+~~~
+```
+
+```ad-snip
+
+```json
+{"sksetup":true} 
+
+{
+    "counters": {
+        "dayStamp": null,
+        "year": null,
+        "month": null,
+        "week": null,
+        "day": null,
+        "doty": null,
+        "dotw": null
+    },
+    "roles": {
+        "kcdRole": null,
+        "kcwRole": null,
+        "kcmRole": null,
+        "kcRole": null,
+        "rkdRole": null,
+        "rkwRole": null,
+        "rkmRole": null,
+        "rkRole": null
+    },
+    "settings": {
+        "channels": {
+            "scorekeeperCh": null,
+            "postCh": null,
+            "testCh": null,
+            "logsCh": null
+        },
+        "registeredRole": null,
+        "skRoles": []
+    }
+}
+```
+
+````
+
