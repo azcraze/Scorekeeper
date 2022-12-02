@@ -113,20 +113,15 @@ This section covers each of the commands and the following information about eac
 - secondary processes that are triggered
 - the result/output
 
-#### Section notes
-**Note the following syntax rules:**
+#### *Note the following syntax rules:*
+**They tell you how to use read the technical parts of this document:**
 > `(this|this|or|this)` - (not optional) used to list subcommands who's processes are identical. think of the`|` as an 'OR' 
 > `<required arg>` - acts as a place holder for information required to be sent with the command
 > `[optional arg]` - acts as a place holder for information is optional depending on the desired action.
 > `([group] [args])` - indicates that in order to use any of the args in the `( )` the author must submit values for all of the args in that group
 > `...` - used to indicate args or group args that the author can optionally send more than one of
 
-
-
-
-
-
-### Commands
+### Command documentation
 
  [[Code/Scorekeeper 2.0/commands/setup scorekeeper\|setup scorekeeper]]
  [[Code/Scorekeeper 2.0/commands/register\|register]]
