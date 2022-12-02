@@ -128,13 +128,13 @@ This section covers each of the commands and the following information about eac
 
 ### Commands
 
-##### [[Code/Scorekeeper 2.0/commands/setup scorekeeper\|setup scorekeeper]]
-##### [[Code/Scorekeeper 2.0/commands/register\|register]]
-##### [[Code/Scorekeeper 2.0/commands/skset\|skset]] (group command)
-##### [[Code/Scorekeeper 2.0/commands/sk\|sk]] +|-
-##### [[Code/Scorekeeper 2.0/commands/testpost-post\|testpost-post]]
-##### [[Code/Scorekeeper 2.0/commands/leaderboard\|leaderboard]]
-##### [[Code/Scorekeeper 2.0/commands/scores\|scores]]
+ [[Code/Scorekeeper 2.0/commands/setup scorekeeper\|setup scorekeeper]]
+ [[Code/Scorekeeper 2.0/commands/register\|register]]
+ [[Code/Scorekeeper 2.0/commands/skset\|skset]] (group command)
+ [[Code/Scorekeeper 2.0/commands/sk\|sk]] +|-
+ [[Code/Scorekeeper 2.0/commands/testpost-post\|testpost-post]]
+ [[Code/Scorekeeper 2.0/commands/leaderboard\|leaderboard]]
+ [[Code/Scorekeeper 2.0/commands/scores\|scores]]
 
 
 
