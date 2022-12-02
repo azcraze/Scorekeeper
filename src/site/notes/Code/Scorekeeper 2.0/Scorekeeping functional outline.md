@@ -259,13 +259,12 @@ const jp = require("jsonpath");
 
 
 ```
-      ┏━━━━━━━━━━┓
-      ┃ command: ┃
-┌─────┃  skset   ┃─────┐
-│     ┗━━━━━━━━━━┛     │
-│           │          │
-▼sub        └┐         ▼
- newuser     ▼      sub
-          sub       logs
-          date
+    ┏━━━━━━━━━━┓
+┌───┃  skset   ┃───┐
+│   ┗━━━━━━━━━━┛   │
+│         │        │
+▼sub      └┐       ▼
+ newuser   ▼    sub
+        sub     logs
+        date
 ```
