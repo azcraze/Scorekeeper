@@ -70,3 +70,9 @@ body {
     background-color: rgba(var(--callout-color), 0.1);
     padding: var(--callout-padding);
 }
+
+
+.markdown-rendered mark {
+    background-color: #8100ff66;
+    color: #9b87ff;
+}
