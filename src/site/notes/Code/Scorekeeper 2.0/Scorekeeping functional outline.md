@@ -113,20 +113,15 @@ This section covers each of the commands and the following information about eac
 - secondary processes that are triggered
 - the result/output
 
-```ad-note
-title: **section notes**
-Note the following syntax rules:
+#### Section notes
+**Note the following syntax rules:**
+> `(this|this|or|this)` - (not optional) used to list subcommands who's processes are identical. think of the`|` as an 'OR' 
+> `<required arg>` - acts as a place holder for information required to be sent with the command
+> `[optional arg]` - acts as a place holder for information is optional depending on the desired action.
+> `([group] [args])` - indicates that in order to use any of the args in the `( )` the author must submit values for all of the args in that group
+> `...` - used to indicate args or group args that the author can optionally send more than one of
 
-`(this|this|or|this)` - (not optional) used to list subcommands who's processes are identical. think of the`|` as an 'OR' 
 
-`<required arg>` - acts as a place holder for information required to be sent with the command
-
-`[optional arg]` - acts as a place holder for information is optional depending on the desired action.
-
-`([group] [args])` - indicates that in order to use any of the args in the `( )` the author must submit values for all of the args in that group
-
-`...` - used to indicate args or group args that the author can optionally send more than one of
-```
 
 
 
