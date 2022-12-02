@@ -96,229 +96,51 @@ bring up the idea of not counting bonuses for RK or not counting kills seperatel
 
 ## Technical Development Process
 
-```ad-note
-title: **section notes**
 
 This section covers each of the commands and the following information about each command:
-	- who its intended for
+- who its intended for
 - the command usage (parameters, args, etc)
 		- optional args
 		- required
-	- the data it will fetch & store from the database
-	- the processes it takes on or with the data stored (author input also)
-	- data values
-		- new variables or db values
-		- updated or changed variables or db values
-		- appended (added to list) variables or db values
-		- deleted, removed or reset variables or db values
-	- data that is changed or updated as secondary
-	- secondary processes that are triggered
-	- the result/output
+- the data it will fetch & store from the database
+- the processes it takes on or with the data stored (author input also)
+- data values
+	- new variables or db values
+	- updated or changed variables or db values
+	- appended (added to list) variables or db values
+	- deleted, removed or reset variables or db values
+- data that is changed or updated as secondary
+- secondary processes that are triggered
+- the result/output
+
+```ad-note
+title: **section notes**
+Note the following syntax rules:
+
+`(this|this|or|this)` - (not optional) used to list subcommands who's processes are identical. think of the`|` as an 'OR' 
+
+`<required arg>` - acts as a place holder for information required to be sent with the command
+
+`[optional arg]` - acts as a place holder for information is optional depending on the desired action.
+
+`([group] [args])` - indicates that in order to use any of the args in the `( )` the author must submit values for all of the args in that group
+
+`...` - used to indicate args or group args that the author can optionally send more than one of
 ```
 
+
+
+
 ### Commands
-### *setup scorekeeper*
-**command usage:**
-`%setup scorekeeper` 
-**data to store:**
 
-**processes:**
+##### [[Code/Scorekeeper 2.0/commands/setup scorekeeper\|setup scorekeeper]]
+##### [[Code/Scorekeeper 2.0/commands/register\|register]]
+##### [[Code/Scorekeeper 2.0/commands/skset\|skset]] (group command)
+##### [[Code/Scorekeeper 2.0/commands/sk\|sk]] +|-
+##### [[Code/Scorekeeper 2.0/commands/testpost-post\|testpost-post]]
+##### [[Code/Scorekeeper 2.0/commands/leaderboard\|leaderboard]]
+##### [[Code/Scorekeeper 2.0/commands/scores\|scores]]
 
-***variables:***
-
-***stored data:***
-
-***other data values:***
-
-**triggers actions:**
-
-**output:**
-
-
-
-#### *register*
-**command usage:**
-`%register [lb name]` 
-→ `[lb name]` - (optional short 8- character, simple name)
-*examples*  `%register pookie`, `%register zey`
-
-**data to store:**
-
-
-**processes:**
-
-***variables:***
-
-***stored data:***
-
-***other data values:***
-
-**triggers actions:**
-
-**output:**
-
-
-#### *skset* *(group command)*
-**command usage:**
-`%setup scorekeeper` 
-**data to store:**
-
-**output:**
-
-
-#### *skset newuser*
-**command usage:**
-`%setup scorekeeper` 
-**data to store:**
-
-**processes:**
-
-***variables:***
-
-***stored data:***
-
-***other data values:***
-
-**triggers actions:**
-
-**output:**
-
-
-
-#### *skset date*
-**command usage:**
-`%setup scorekeeper` 
-**data to store:**
-
-**processes:**
-
-***variables:***
-
-***stored data:***
-
-***other data values:***
-
-**triggers actions:**
-
-**output:**
-
-
-
-#### *skset admin*
-**command usage:**
-`%setup scorekeeper` 
-**data to store:**
-
-
-
-#### *skset date*
-**command usage:**
-`%setup scorekeeper` 
-**data to store:**
-
-**processes:**
-
-***variables:***
-
-***stored data:***
-
-***other data values:***
-
-**triggers actions:**
-
-**output:**
-
-
-#### *skset logs*
-**command usage:**
-`%setup scorekeeper` 
-**data to store:**
-
-**processes:**
-
-***variables:***
-
-***stored data:***
-
-***other data values:***
-
-**triggers actions:**
-
-**output:**
-
-
-#### *sk +|-*
-**command usage:**
-`%setup scorekeeper` 
-**data to store:**
-
-**processes:**
-
-***variables:***
-
-***stored data:***
-
-***other data values:***
-
-**triggers actions:**
-
-**output:**
-
-
-
-#### *testpost / post*
-**command usage:**
-`%setup scorekeeper` 
-**data to store:**
-
-**processes:**
-
-***variables:***
-
-***stored data:***
-
-***other data values:***
-
-**triggers actions:**
-
-**output:**
-
-
-#### *leaderboard*
-**command usage:**
-`%setup scorekeeper` 
-**data to store:**
-
-**processes:**
-
-***variables:***
-
-***stored data:***
-
-***other data values:***
-
-**triggers actions:**
-
-**output:**
-
-
-
-#### *scores*
-**command usage:**
-`%setup scorekeeper` 
-**data to store:**
-
-**processes:**
-
-***variables:***
-
-***stored data:***
-
-***other data values:***
-
-**triggers actions:**
-
-**output:**
 
 
 
