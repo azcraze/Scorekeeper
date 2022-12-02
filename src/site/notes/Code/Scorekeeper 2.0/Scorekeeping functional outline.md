@@ -92,7 +92,7 @@ bring up the idea of not counting bonuses for RK or not counting kills seperatel
 `%testpost (d|w|m)` - preview winner result embeds and check for corrections needed\
 `%post (d|w|m)` - post winners\
 `%scores` - check personal or other player stats\
-`%lb` - get current tallied scores
+`%leaderboard` - get current tallied scores
 
 ## Technical Development Process
 
@@ -229,6 +229,100 @@ This section covers each of the commands and the following information about eac
 **output:**
 
 
+#### *skset logs*
+**command usage:**
+`%setup scorekeeper` 
+**data to store:**
+
+**processes:**
+
+***variables:***
+
+***stored data:***
+
+***other data values:***
+
+**triggers actions:**
+
+**output:**
+
+
+#### *sk +|-*
+**command usage:**
+`%setup scorekeeper` 
+**data to store:**
+
+**processes:**
+
+***variables:***
+
+***stored data:***
+
+***other data values:***
+
+**triggers actions:**
+
+**output:**
+
+
+
+#### *testpost / post*
+**command usage:**
+`%setup scorekeeper` 
+**data to store:**
+
+**processes:**
+
+***variables:***
+
+***stored data:***
+
+***other data values:***
+
+**triggers actions:**
+
+**output:**
+
+
+#### *leaderboard*
+**command usage:**
+`%setup scorekeeper` 
+**data to store:**
+
+**processes:**
+
+***variables:***
+
+***stored data:***
+
+***other data values:***
+
+**triggers actions:**
+
+**output:**
+
+
+
+#### *scores*
+**command usage:**
+`%setup scorekeeper` 
+**data to store:**
+
+**processes:**
+
+***variables:***
+
+***stored data:***
+
+***other data values:***
+
+**triggers actions:**
+
+**output:**
+
+
+
+
 
 ```ad-summary
 title: JSON Files
@@ -255,14 +349,4 @@ const _ = require("lodash");
 const fs = require("fs-extra");
 const jp = require("jsonpath");
 ~~~
-```
-
-
-```
-      ┏━━━━━━━━━━┓
-   ┌──┃  skset   ┃───┐
-   ▼  ┗━━━━━━━━━━┛   ▼
-newuser    ┌─     logs
-           ▼
-         date
 ```
