@@ -27,7 +27,11 @@ period
 
 #### **scripts:**
 
-;;ad-note
+
+
+> [!codenote] RK script
+> Contents
+
 
 ```js
 const _ = require("lodash");
