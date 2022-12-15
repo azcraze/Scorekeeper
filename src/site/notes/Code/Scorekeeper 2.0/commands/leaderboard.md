@@ -28,12 +28,10 @@ period
 #### **scripts:**
 
 
+```ad-code
+Type: **code** 
 
-> [!codenote] RK script
-> Contents
-
-
-```js
+~~~js
 const _ = require("lodash");
 const jp = require("jsonpath");
 const fs = require("fs-extra");
@@ -190,6 +188,8 @@ break;
 console.log(LB);
 //this.storeValue(LB, 1, "lb", cache);
 //Actions.callNextAction(cache);
+~~~
+
 ```
 
 #### **triggers actions:**
