@@ -75,6 +75,10 @@ if true:
 	- logsch
 
 
+#### **triggers actions:**
+
+#### **output:**
+
 ````ad-codenote
 title: **snippets**
 
@@ -153,7 +157,6 @@ settings: {
             "testCh": null,
             "logsCh": null
         },
-        "registeredRole": null,
         "skRoles": []
     }
 }
