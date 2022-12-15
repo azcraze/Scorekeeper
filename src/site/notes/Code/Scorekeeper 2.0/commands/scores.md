@@ -3,18 +3,25 @@
 ---
 
 
-**command usage:**
-`%setup scorekeeper` 
-**data to store:**
 
-**processes:**
+#### *scores*
+#### **command usage:**
+`%register [lb name]` 
+→ `[lb name]` - (optional) short 8- character, simple name
+*examples* 
+
+#### **data To store:**
+
+
+#### **processes:**
 
 ***variables:***
 
-***stored data:***
+***controlled data:***
+
 
 ***other data values:***
 
-**triggers actions:**
+#### **triggers actions:**
 
-**output:**
+#### **output:**
