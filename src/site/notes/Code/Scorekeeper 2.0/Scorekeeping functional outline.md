@@ -91,7 +91,7 @@ bring up the idea of not counting bonuses for RK or not counting kills seperatel
 `%sk <+|->` - sk command to add or subtract daily scores for a player\
 `%testpost (d|w|m)` - preview winner result embeds and check for corrections needed\
 `%post (d|w|m)` - post winners\
-`%scores` - check personal or other player stats\
+`%scores` - check personal or other player stats
 `%leaderboard` - get current tallied scores
 
 ## Technical Development Process
@@ -137,23 +137,77 @@ This section covers each of the commands and the following information about eac
 
 
 ```ad-summary
-title: JSON Files
+title: Bot project directory
+Most files and folders are here. Some i may have left out as redundantcies or unnecessary or for brevity
 
 So far json files planned for
 ```dirtree
-- /data
-	- ..json
-- settings.json
-- /scorekeeping
-	- logs.json
+
+- actions
+- data/
+	- scorekeeping/
+		- SERVERID1/
+			- ksScores.json
+			- rkScores.json
+			- logs.json*
+			- skVars.json
+		- ...SERVERID2/
+			- ...
+		- playerRecords/
+			- player1-records.json
+			- player2-records,json
+			- ...
+		- commands.json
+		- events.json
+		- globals.json
+		- globalVars.json
+		- players.json
+		- prefixes.json
+		- servers.json
+		- serverVars.json
+		- settings.json
+		- storedVariables.json
+		- users.json
+	- templates/
+		- kcScores.json
+		- rkScores.json
+		- skVars.json
+		- player-records.json
+		- ...
+- events/
+- extentions/
+- node__modules/
+	- .../
+	- ...
+- resources/
+	- functions/
+		- ...
+	- tests/
+		- ...
+	- scripts/
+	- addPlayerKc.js
+	- addPlayerRk.js
+	- kc.js
+	- rk.js
+	- kcLb.js
+	- rkLb.js
+	- kcRemove.js
+	- rkRemove.js
+	- post.js
+	- getSettings.js
+- bot.js
+- package.json
+- project.discordbot
+
+
 ```
 
 
 
-```ad-codenote
+```ad-snip
 title: Requirements
 
-```ad-snip
+```ad-codenote
 title: NPM Modules
 
 ~~~js
