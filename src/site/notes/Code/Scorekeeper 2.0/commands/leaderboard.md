@@ -32,162 +32,51 @@ period
 Type: **code** 
 
 ~~~js
-const _ = require("lodash");
-const jp = require("jsonpath");
-const fs = require("fs-extra");
-const {
-    repeat
-} = require("lodash");
-//var servID = 952122158321139733;
-//const skPath = `./data/scorekeeping/${serverVars("servID")}/scorekeeping.json`;
-const skPath =
-    "/Volumes/[C] Windows 11.hidden/Users/home/Desktop/fizzy/data/scorekeeping/952122158321139733/scorekeeping.json";
-const jFile = fs.readJsonSync(skPath);
+const fs = require('fs');
+const pretty = require("prettyjson");
+const c = require('ansi-colors');
 
-//let period = tempVars("period");
-let period = "day";
+const options = {
+	keysColor: "rainbow",
+	dashColor: "magenta",
+	stringColor: "grey",
+	defaultIndentation: 2,
+	numberColor: "white",
+	inlineArrays: true,
+	multilineStringColor: "rainbow",
+	emptyArrayMsg: "[]"
+};
 
-/////////////////////////////**
-// some functions
-//////////////////////////////
-
-//general utility func
-function clog(arg) {
-    console.log(arg);
+function prettify(data) {
+	return pretty.render(data, options);
 }
 
-//chunk up object
-const chunk = (arr, size) =>
-    arr.reduce(
-        (acc, e, i) => (
-            i % size ? acc[acc.length - 1].push(e) : acc.push([e]), acc
-        ),
-        []
-    );
-//sort by specific key    
-const sortBy = (arr, k) =>
-    arr.concat().sort((a, b) => (a[k] > b[k] ? 1 : a[k] < b[k] ? -1 : 0));
-
-//truncate to whole number
-const trunc = (n) => ~~n;
-
-/////////////////////////////**
-// simple declarations
-//////////////////////////////
-let obj;
-let ind;
-let lb;
-let LB;
-let arr;
-
-/////////////////////////////**
-// create object from array structure
-//////////////////////////////
-function mapObj() {
-    let i = 0;
-    let len = arr.length;
-    let result = [];
-
-    do {
-        let [a, red, blue, kills, rebs, bonus, points] = [
-            arr[i][0],
-            arr[i][1][0],
-            arr[i][1][1],
-            arr[i][1][2],
-            arr[i][2][0],
-            arr[i][2][1],
-            arr[i][2][2],
-        ];
-        let data = {
-            player: a,
-            rk: {
-                rebs: rebs,
-                bonus: bonus,
-                points: points,
-            },
-            kc: {
-                red: red,
-                blue: blue,
-                kills: kills,
-            },
-        };
-        result.push({
-            ...data,
-        });
-        i = i + 1;
-    } while (i < len);
-    return sortBy(result, "rk" [2]);
+function out(toLog) {
+	console.log(prettify(toLog));
 }
 
-/////////////////////////////**
-// print RK leaderboard
-//////////////////////////////
+const path = "resources/test-scripts/scores.json";
+const dayStamp = "12172022";
 
-function genLb() {
-    let i = 0;
-    let len = lb.length;
-    let result = ["`PLAYER   RK  +K  ⇢ TOTAL`", "---------------------------"];
+// Load the JSON file
+const rawData = fs.readFileSync(path);
+const scores = JSON.parse(rawData);
 
-    do {
-        let [a, rebs, bonus, points] = [
-            lb[i].player,
-            lb[i].rk.rebs,
-            lb[i].rk.bonus,
-            lb[i].rk.points,
-        ];
-        a = a + _.repeat(".", 8 - a.length);
-        rebs = _.repeat(".", 4 - rebs.length) + rebs;
-        bonus = bonus + _.repeat(".", 5 - bonus.length);
-        points = _.repeat(".", 4 - points.length) + trunc(points);
-        let lbRow = `\`${a}\` • \`${rebs}\` • \`${bonus}\` ⇢ \`${points}\``;
-        result.push(lbRow);
-        i = i + 1;
-    } while (i < len);
-    return _.join(result, "\n");
+// Convert the scores object to an array of key-value pairs and sort it by sum
+const scoresArray = Object.entries(scores[dayStamp]);
+scoresArray.sort((a, b) => b[1].total - a[1].total);
+
+// Build the leaderboard table
+const leaderboard = `${c.bgMagenta("PLAYER    RED  BLU   TOTAL")}\n${c.blue("--------------------------")}\n`;
+for (const [name, score] of scoresArray) {
+  leaderboard += `${c.blue(name.padEnd(9))} ${score.red.toString().padEnd(5)} ${score.blue.toString().padEnd(5)}${score.total}\n`;
 }
 
-////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////
-//
-//                 Leaderboard switch
-//
-////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////
+out(leaderboard);
 
-switch (period) {
-    case "day": {
-        obj = Object.entries(jFile.day.logs);
-        obj = obj.flat(2);
-        arr = chunk(obj, 3);
+this.storeValue(leaderboard, 1, "out1", cache);
+Actions.callNextAction(cache);
 
-        lb = mapObj();
-        LB = genLb();
-    }
-    break;
-case "week": {
-    obj = Object.entries(jFile.week.logs);
-    obj = obj.flat(2);
-    arr = chunk(obj, 3);
-
-    lb = mapObj();
-    LB = genLb();
-}
-break;
-case "month": {
-    obj = Object.entries(jFile.month.logs);
-    obj = obj.flat(2);
-    arr = chunk(obj, 3);
-
-    lb = mapObj();
-    LB = genLb();
-}
-break;
-//default: action to execute on match; break;
-}
-
-console.log(LB);
-//this.storeValue(LB, 1, "lb", cache);
-//Actions.callNextAction(cache);
 ~~~
 
 ```
